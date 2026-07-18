@@ -1,8 +1,11 @@
 cask "proxion" do
-  version "0.1.0"
-  sha256 "32ee6f34568a34d375210642747d731f9a96cf845ebc3444e3ba0c28578b8fff"
+  arch arm: "aarch64", intel: "x64"
 
-  url "https://github.com/cafeTechne/proxion-messenger/releases/download/v#{version}/Proxion_#{version}_aarch64.dmg"
+  version "0.1.1"
+  sha256 arm:   "caa6b652e8db4fe5fd4d55825e02278e2004ded032d742f0b81d26b7d527a56e",
+         intel: "ac5e1d8e5e9c7f31f5adfd369dc10bd77852debb5a647ba129fb790867f60781"
+
+  url "https://github.com/cafeTechne/proxion-messenger/releases/download/v#{version}/Proxion_#{version}_#{arch}.dmg"
   name "Proxion"
   desc "Sovereign messenger built on the Solid Protocol"
   homepage "https://cafetechne.github.io/proxion-messenger/"
@@ -12,9 +15,7 @@ cask "proxion" do
     strategy :github_latest
   end
 
-  # v0.1.0 shipped Apple Silicon only; Intel (macOS 10.15+) lands in v0.1.1.
-  depends_on arch: :arm64
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :catalina"
 
   app "Proxion.app"
 

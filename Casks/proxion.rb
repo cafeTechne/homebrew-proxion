@@ -1,9 +1,9 @@
 cask "proxion" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.1.1"
-  sha256 arm:   "caa6b652e8db4fe5fd4d55825e02278e2004ded032d742f0b81d26b7d527a56e",
-         intel: "ac5e1d8e5e9c7f31f5adfd369dc10bd77852debb5a647ba129fb790867f60781"
+  version "0.1.2"
+  sha256 arm:   "a82f38dd44c88183adcf798863cc8bf7cd3aed101e3a0766b1985e5fe96f0396",
+         intel: "e44c85af26427dc2d516e34c613990bedf5b2e430694fca9d35ecac1fe7a34de"
 
   url "https://github.com/cafeTechne/proxion-messenger/releases/download/v#{version}/Proxion_#{version}_#{arch}.dmg"
   name "Proxion"
